@@ -1,5 +1,6 @@
 @file:Suppress("UnstableApiUsage")
 
+import catalog.androidBaseLibs
 import catalog.libs
 import modules.AbstractionModules
 import modules.DataModules
@@ -118,7 +119,7 @@ class BuilderConventionPlugin : Plugin<Project> {
 
                 composeOptions {
                     kotlinCompilerExtensionVersion =
-                        libs.findVersion("androidxComposeCompiler").get().toString()
+                        androidBaseLibs.findVersion("androidxComposeCompiler").get().toString()
                 }
             }
         }

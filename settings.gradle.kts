@@ -28,6 +28,11 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
     }
+    versionCatalogs {
+        create("androidBaseLibs") {
+            from(files("ocean-android-base/gradle/libs.versions.toml"))
+        }
+    }
 }
 rootProject.name = "skeleton"
 include(":skeleton-app")
