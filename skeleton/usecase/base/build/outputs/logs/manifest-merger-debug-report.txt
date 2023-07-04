@@ -1,0 +1,25 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml:2:13-83
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml:2:13-83
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml:2:13-83
+	package
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+		ADDED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml:2:13-83
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+	xmlns:android
+		ADDED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml:2:23-81
+uses-sdk
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml reason: use-sdk injection requested
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+	android:targetSdkVersion
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+		ADDED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+	android:minSdkVersion
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+		ADDED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml
+		INJECTED from /Users/utaputranto/Works/Ocean/Projects/skeleton/skeleton/usecase/base/build/intermediates/tmp/ProcessLibraryManifest/debug/tempAndroidManifest10490824584106559158.xml

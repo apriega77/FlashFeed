@@ -1,0 +1,143 @@
+###
+# This file is used for managing Gradle dependencies using version catalogs in Android development.
+###
+
+#----------------------------------------------------------------
+
+#This is the section where you define the version of each library and tool used in your Android project.
+#Each entry includes the name of the library or tool, followed by the specific version.
+[versions]
+accompanist = "0.30.1"
+accompanistPager = "0.28.0"
+accompanistPagerAnimation = "0.23.1"
+accompanistPagerIndicator = "0.23.1"
+accompanistPagerSwipeRefresh = "0.26.4-beta"
+androidxComposeBom = "2023.06.00"
+androidxComposeTracing = "1.0.0-alpha03"
+androidxSecurityCrypto = "1.1.0-alpha03"
+androidxComposeCompiler = "1.4.6"
+kotlinxCoroutines = "1.7.1"
+retrofit = "2.9.0"
+
+androidGradlePlugin = "8.0.2"
+detekt = "1.23.0"
+firebaseAppDistributionPlugin = "4.0.0"
+firebaseBom = "31.2.0"
+firebaseCrashlyticsPlugin = "2.9.6"
+firebasePerfPlugin = "1.4.2"
+gmsPlugin = "4.3.15"
+hilt = "2.46.1"
+kotlin = "1.8.10"
+spotless = "6.19.0"
+
+#----------------------------------------------------------------
+
+#This section lists the libraries used in your project.
+#Each library has an entry consisting of a group, a name,and a reference version that refers to the version defined in the "Versions" section.
+[libraries]
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-performance = { group = "com.google.firebase", name = "firebase-perf-ktx" }
+
+hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
+hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
+hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
+# Dependencies of the included build-logic
+android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
+detekt-gradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
+firebase-crashlytics-gradlePlugin = { group = "com.google.firebase", name = "firebase-crashlytics-gradle", version.ref = "firebaseCrashlyticsPlugin" }
+firebase-app-distribution-gradlePlugin = { group = "com.google.firebase", name = "firebase-appdistribution-gradle", version.ref = "firebaseAppDistributionPlugin" }
+firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "perf-plugin", version.ref = "firebasePerfPlugin" }
+hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
+kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
+spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+
+accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
+accompanist-pager-indicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanistPagerIndicator" }
+accompanist-navigation-animation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanistPagerAnimation" }
+accompanist-swiperefresh = { group = "com.google.accompanist", name = "accompanist-swiperefresh", version.ref = "accompanistPagerSwipeRefresh" }
+
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "androidxSecurityCrypto" }
+
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-compiler = { group = "androidx.compose.compiler", name = "compiler", version.ref = "androidxComposeCompiler" }
+
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+
+androidx-compose-material-iconsCore = { group = "androidx.compose.material", name = "material-icons-core" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+
+androidx-compose-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeTracing" }
+
+androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
+
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+#----------------------------------------------------------------
+
+#This section lists the plugins used in your project.
+#Each plugin has an entry consisting of an ID and a version reference that refers to the version defined in the "Versions" section.
+[plugins]
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
+firebase-app-distribution = { id = "com.google.firebase.appdistribution", version.ref = "firebaseAppDistributionPlugin"}
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerfPlugin" }
+gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ocean-convention-builder = { id = "co.id.samudrainovasi.builderPlugin", version = "1" }
+ocean-convention-detekt = { id = "co.id.samudrainovasi.detektPlugin", version = "1" }
+ocean-convention-spotless = { id = "co.id.samudrainovasi.spotlessPlugin", version = "1" }
+spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+
+#----------------------------------------------------------------
+
+#This is the section where you can group related libraries into specific bundles.
+#Each bundle has an entry that includes a list of libraries you want to group together.
+#You can define suffix "implementation, api, test, etc." to add configuration name.
+[bundles]
+android-base-abstraction-api = [
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-android"
+]
+android-base-data-api = [
+    "retrofit-core",
+    "retrofit-converter-gson",
+    "androidx-security-crypto"
+]
+android-base-hub-api = []
+android-base-presentation-api = [
+    "accompanist-permissions",
+    "accompanist-systemuicontroller",
+    "accompanist-pager",
+    "accompanist-pager-indicators",
+    "accompanist-navigation-animation",
+    "accompanist-swiperefresh",
+    "androidx-compose-foundation",
+    "androidx-compose-foundation-layout",
+    "androidx-compose-material-iconsCore",
+    "androidx-compose-material-iconsExtended",
+    "androidx-compose-ui-test",
+    "androidx-compose-ui-testManifest",
+    "androidx-compose-ui-tooling",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-ui-util",
+    "androidx-compose-compiler",
+    "androidx-compose-tracing"
+]
