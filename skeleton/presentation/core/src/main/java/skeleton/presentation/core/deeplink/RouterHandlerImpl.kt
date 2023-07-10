@@ -10,12 +10,12 @@ class RouterHandlerImpl(private val activity: FragmentActivity) : RouterHandler 
         // For logging or future purpose
     }
 
+    @Suppress("UnusedPrivateProperty")
     private val resource by lazy { activity.resources }
 
     override fun onRouteNotFound(className: String) {
         // handle error
         activity.showAsBottomSheet {
-
         }
     }
 }

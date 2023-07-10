@@ -1,9 +1,9 @@
+:sparkles: add retrofit
+
+update reference android base
+
 Implement DeepLink
 
 Merge branch 'feature/configuration' into 'development'
 
 :sparkles: setup configuration
-
-See merge request sedayux/ocean-skeleton!6
-:sparkles: setup configuration
-

@@ -1,3 +1,4 @@
+import catalog.findImplementation
 import catalog.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -9,8 +10,8 @@ class FirebaseConventionPlugin : Plugin<Project> {
         with(target) {
             with(pluginManager) {
                 apply("com.google.firebase.appdistribution")
-                apply("com.google.firebase.crashlytics")
                 apply("com.google.firebase.firebase-perf")
+                apply("com.google.firebase.crashlytics")
                 apply("com.google.gms.google-services")
             }
 
@@ -29,9 +30,11 @@ class FirebaseConventionPlugin : Plugin<Project> {
             dependencies {
                 val bom = libs.findLibrary("firebase-bom").get()
                 add("implementation", platform(bom))
-                "implementation"(libs.findLibrary("firebase.analytics").get())
-                "implementation"(libs.findLibrary("firebase.performance").get())
-                "implementation"(libs.findLibrary("firebase.crashlytics").get())
+                findImplementation(
+                    "firebase.analytics",
+                    "firebase.performance",
+                    "firebase.crashlytics",
+                )
             }
         }
     }

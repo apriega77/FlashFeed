@@ -37,6 +37,7 @@ dependencies {
     compileOnly(libs.firebase.crashlytics.gradlePlugin)
     compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
+    compileOnly(libs.kotlin.stdblib.gradlePlugin)
     compileOnly(libs.spotless.gradlePlugin)
     compileOnly(libs.hilt.gradlePlugin)
 }

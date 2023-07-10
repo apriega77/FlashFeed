@@ -7,23 +7,32 @@
 #This is the section where you define the version of each library and tool used in your Android project.
 #Each entry includes the name of the library or tool, followed by the specific version.
 [versions]
-androidGradlePlugin = "8.0.2"
+androidGradlePlugin = "8.1.0"
+biometric = "1.2.0-alpha05"
+coreKtx = "1.10.1"
 detekt = "1.23.0"
 dokka = "1.8.20"
 firebaseAppDistributionPlugin = "4.0.0"
-firebaseBom = "31.2.0"
-firebaseCrashlyticsPlugin = "2.9.6"
+firebaseBom = "32.2.0"
+firebaseCrashlyticsPlugin = "2.9.7"
 firebasePerfPlugin = "1.4.2"
 gmsPlugin = "4.3.15"
 hilt = "2.47"
-kotlin = "1.8.20"
-spotless = "6.19.0"
+kotlin = "1.9.0"
+material = "1.9.0"
+spotless = "6.20.0"
+playServiceLocation = "21.0.1"
+coroutinesPlayService = "1.7.1"
+appcompat = "1.6.1"
 
 #----------------------------------------------------------------
 
 #This section lists the libraries used in your project.
 #Each library has an entry consisting of a group, a name,and a reference version that refers to the version defined in the "Versions" section.
 [libraries]
+biometric = { group = "androidx.biometric", name = "biometric-ktx", version.ref = "biometric" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+coroutines-play-service = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutinesPlayService" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
 firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
 firebase-cloud-messaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
@@ -33,6 +42,9 @@ firebase-performance = { group = "com.google.firebase", name = "firebase-perf-kt
 hilt-android = { group = "com.google.dagger", name = "hilt-android", version.ref = "hilt" }
 hilt-android-testing = { group = "com.google.dagger", name = "hilt-android-testing", version.ref = "hilt" }
 hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "hilt" }
+
+material = { module = "com.google.android.material:material", version.ref = "material" }
+play-service-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServiceLocation" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -44,6 +56,8 @@ hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-p
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
 dokka-gradlePlugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
+kotlin-stdblib-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
 
 #----------------------------------------------------------------
 
@@ -52,18 +66,19 @@ dokka-gradlePlugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugi
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
-detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt"}
-firebase-app-distribution = { id = "com.google.firebase.appdistribution", version.ref = "firebaseAppDistributionPlugin"}
+detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
+firebase-app-distribution = { id = "com.google.firebase.appdistribution", version.ref = "firebaseAppDistributionPlugin" }
 firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
 firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerfPlugin" }
 gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.8.20" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 ocean-convention-builder = { id = "co.id.samudrainovasi.builderPlugin", version = "1" }
 ocean-convention-detekt = { id = "co.id.samudrainovasi.detektPlugin", version = "1" }
 ocean-convention-spotless = { id = "co.id.samudrainovasi.spotlessPlugin", version = "1" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
 dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 
 #----------------------------------------------------------------
 

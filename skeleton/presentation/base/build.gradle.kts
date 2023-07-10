@@ -25,4 +25,5 @@ dependencies {
        *
        * After you modified that file, make sure your dependencies sync properly
        */
+    api(project(":${ProjectConfig.PROJECT_NAME}:hub"))
 }
