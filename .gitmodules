@@ -1,4 +1,3 @@
 [submodule "ocean-android-base"]
 	path = ocean-android-base
 	url = https://gitlab.com/sedayux/ocean-android-base.git
-	branch = feature/android-base
