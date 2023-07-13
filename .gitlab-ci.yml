@@ -1,0 +1,59 @@
+image: mingc/android-build-box:latest
+
+stages:
+  - cloneRepo
+  - buildDev
+  - buildAndDistribute
+
+cache:
+  key: cache-key
+  paths:
+    - .gradle/
+    - .m2/repository/
+
+variables:
+  FIREBASE_TOKEN: "$FIREBASE_TOKEN_ID"
+
+cloneRepository:
+  stage: cloneRepo
+  script:
+    - git clone https://gitlab.com/sedayux/ocean-skeleton.git
+    - cd ocean-skeleton
+    - git submodule sync
+    - git submodule update --init --recursive
+    - git status
+
+assembleDevDebug:
+  stage: buildDev
+  script:
+    - icacls .\gradlew /grant Everyone:RX
+    - ./gradlew  --no-daemon --console=plain assembleDevDebug appDistributionUploadDevDebug --no-build-cache
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - skeleton-app/build/outputs/apk/dev/debug/skeleton-app-dev-debug.apk
+
+assembleSitDebug:
+  stage: buildAndDistribute
+  script:
+    - icacls .\gradlew /grant Everyone:RX
+    - ./gradlew --no-daemon --console=plain assembleSitDebug appDistributionUploadSitDebug --no-build-cache
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - skeleton-app/build/outputs/apk/sit/debug/skeleton-app-sit-debug.apk
+  only:
+    - development
+    - /^feature\/.*\/master$/
+
+assembleUatDebug:
+  stage: buildAndDistribute
+  script:
+    - icacls .\gradlew /grant Everyone:RX
+    - ./gradlew --no-daemon --console=plain assembleUatDebug appDistributionUploadUatDebug --no-build-cache
+  artifacts:
+    expire_in: 7 days
+    paths:
+      - skeleton-app/build/outputs/apk/uat/debug/skeleton-app-uat-debug.apk
+  only:
+    - /^uat.*$/

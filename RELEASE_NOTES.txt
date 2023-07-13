@@ -1,0 +1,9 @@
+remove branch  git modules
+
+Setup CICD
+
+ignore file build
+
+init development
+
+setup skeleton

@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "125730717941",
+    "project_id": "skeleton-dev-ba466",
+    "storage_bucket": "skeleton-dev-ba466.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125730717941:android:d0dfecbb6ec2873d72c5bc",
+        "android_client_info": {
+          "package_name": "co.id.samudrainovasi.skeleton.dev"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDft-hx_FfWSMzmp2LnYECEXO0CJBnhtrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125730717941:android:d9bba034db8b66d272c5bc",
+        "android_client_info": {
+          "package_name": "co.id.samudrainovasi.skeleton.sit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDft-hx_FfWSMzmp2LnYECEXO0CJBnhtrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:125730717941:android:90e5ed572093f48872c5bc",
+        "android_client_info": {
+          "package_name": "co.id.samudrainovasi.skeleton.uat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDft-hx_FfWSMzmp2LnYECEXO0CJBnhtrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "125730717941-hk8fodte8g7p51gis5ks5lnquftf8ut5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
