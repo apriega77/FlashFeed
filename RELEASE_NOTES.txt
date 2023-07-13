@@ -1,9 +1,9 @@
-coba 3
-
-coba 2
-
-coba
+remove branch  git modules
 
 Setup CICD
 
 ignore file build
+
+init development
+
+setup skeleton
