@@ -2,8 +2,9 @@ image: mingc/android-build-box:latest
 
 stages:
   - cloneRepo
-  - buildDev
+  - spotless
   - buildAndDistribute
+  - buildDev
 
 cache:
   key: cache-key
@@ -29,9 +30,10 @@ assembleDevDebug:
     - icacls .\gradlew /grant Everyone:RX
     - ./gradlew  --no-daemon --console=plain assembleDevDebug appDistributionUploadDevDebug --no-build-cache
   artifacts:
-    expire_in: 1 days
+    expire_in: 1 day
     paths:
       - skeleton-app/build/outputs/apk/dev/debug/skeleton-app-dev-debug.apk
+  when: manual
 
 assembleSitDebug:
   stage: buildAndDistribute
@@ -39,7 +41,7 @@ assembleSitDebug:
     - icacls .\gradlew /grant Everyone:RX
     - ./gradlew --no-daemon --console=plain assembleSitDebug appDistributionUploadSitDebug --no-build-cache
   artifacts:
-    expire_in: 1 days
+    expire_in: 1 day
     paths:
       - skeleton-app/build/outputs/apk/sit/debug/skeleton-app-sit-debug.apk
   only:
@@ -52,8 +54,13 @@ assembleUatDebug:
     - icacls .\gradlew /grant Everyone:RX
     - ./gradlew --no-daemon --console=plain assembleUatDebug appDistributionUploadUatDebug --no-build-cache
   artifacts:
-    expire_in: 1 days
+    expire_in: 1 day
     paths:
       - skeleton-app/build/outputs/apk/uat/debug/skeleton-app-uat-debug.apk
   only:
     - /^uat.*$/
+
+checkSpotless:
+  stage: spotless
+  script:
+    - ./gradlew spotlessCheck

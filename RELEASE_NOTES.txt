@@ -1,9 +1,9 @@
+Update .gitlab-ci.yml file
+change reference android base
+
+apply detekt & max_line_length editor config
+
 Merge branch 'feature/cicd/master' into 'development'
 
 Setup CICD
-
-See merge request sedayux/ocean-skeleton!1
-android base reference
-
-apply spotless
 
