@@ -1,9 +1,9 @@
+run the spotlessCheck task in parallel
+
+Apply Spotless in CI/CD
+
 Update .gitlab-ci.yml file
 change reference android base
 
 apply detekt & max_line_length editor config
-
-Merge branch 'feature/cicd/master' into 'development'
-
-Setup CICD
 
