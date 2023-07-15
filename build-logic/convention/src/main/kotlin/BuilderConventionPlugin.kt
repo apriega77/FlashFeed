@@ -87,6 +87,7 @@ class BuilderConventionPlugin : Plugin<Project> {
         androidLibConfiguration {
             tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
                 kotlinOptions.languageVersion = "1.9"
+                kotlinOptions.jvmTarget = "1.8"
             }
             namespace = "$PROJECT_NAME.$name.$currentName"
             compileSdk = AppConfig.COMPILE_SDK

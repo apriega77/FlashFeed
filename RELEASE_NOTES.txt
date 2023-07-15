@@ -1,0 +1,9 @@
+:memo: setup docs
+
+Merge branch 'feature/check_spotless/master' into 'development'
+
+run the spotlessCheck task after buildAndDistribute task
+
+See merge request sedayux/ocean-skeleton!3
+run the spotlessCheck task after buildAndDistribute task
+

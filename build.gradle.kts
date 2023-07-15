@@ -34,9 +34,11 @@ plugins {
     alias(libs.plugins.ocean.convention.builder)
     alias(libs.plugins.ocean.convention.spotless) apply false
     alias(libs.plugins.spotless) apply false
+    alias(libs.plugins.dokka) apply false
 }
 
 allprojects {
     apply(plugin = rootProject.libs.plugins.ocean.convention.detekt.get().pluginId)
     apply(plugin = rootProject.libs.plugins.ocean.convention.spotless.get().pluginId)
+    apply(plugin = rootProject.libs.plugins.dokka.get().pluginId)
 }

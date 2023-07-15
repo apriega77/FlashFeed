@@ -9,13 +9,14 @@
 [versions]
 androidGradlePlugin = "8.0.2"
 detekt = "1.23.0"
+dokka = "1.8.20"
 firebaseAppDistributionPlugin = "4.0.0"
 firebaseBom = "31.2.0"
 firebaseCrashlyticsPlugin = "2.9.6"
 firebasePerfPlugin = "1.4.2"
 gmsPlugin = "4.3.15"
-hilt = "2.46.1"
-kotlin = "1.8.10"
+hilt = "2.47"
+kotlin = "1.8.20"
 spotless = "6.19.0"
 
 #----------------------------------------------------------------
@@ -42,6 +43,7 @@ firebase-performance-gradlePlugin = { group = "com.google.firebase", name = "per
 hilt-gradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "hilt" }
 kotlin-gradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 spotless-gradlePlugin = { group = "com.diffplug.spotless", name = "spotless-plugin-gradle", version.ref = "spotless" }
+dokka-gradlePlugin = { group = "org.jetbrains.dokka", name = "dokka-gradle-plugin", version.ref = "dokka" }
 
 #----------------------------------------------------------------
 
@@ -61,6 +63,7 @@ ocean-convention-builder = { id = "co.id.samudrainovasi.builderPlugin", version 
 ocean-convention-detekt = { id = "co.id.samudrainovasi.detektPlugin", version = "1" }
 ocean-convention-spotless = { id = "co.id.samudrainovasi.spotlessPlugin", version = "1" }
 spotless = { id = "com.diffplug.spotless", version.ref = "spotless" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 
 #----------------------------------------------------------------
 
