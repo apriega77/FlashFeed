@@ -70,4 +70,3 @@ codeFormatterCheck:
       } else {
        Write-Host "Skipping codeFormatterCheck"
       }
-  when: on_failure
