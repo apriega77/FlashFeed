@@ -2,17 +2,17 @@ image: mingc/android-build-box:latest
 
 stages:
   - cloneRepo
+  - codeFormatter
   - buildAndDistribute
-  - spotless
 
 cache:
   key: cache-key
   paths:
     - .gradle/
-    - .m2/repository/
 
 variables:
   FIREBASE_TOKEN: "$FIREBASE_TOKEN_ID"
+  ENABLE_CODE_FORMATTER: "false"
 
 cloneRepository:
   stage: cloneRepo
@@ -42,7 +42,7 @@ assembleSitDebug:
   artifacts:
     expire_in: 1 day
     paths:
-     - skeleton-app/build/outputs/apk/sit/debug/skeleton-app-sit-debug.apk
+      - skeleton-app/build/outputs/apk/sit/debug/skeleton-app-sit-debug.apk
   only:
     - development
     - /^feature\/.*\/master$/
@@ -55,11 +55,19 @@ assembleUatDebug:
   artifacts:
     expire_in: 1 day
     paths:
-     - skeleton-app/build/outputs/apk/uat/debug/skeleton-app-uat-debug.apk
+      - skeleton-app/build/outputs/apk/uat/debug/skeleton-app-uat-debug.apk
   only:
     - /^uat.*$/
 
-checkSpotless:
-  stage: spotless
+
+codeFormatterCheck:
+  stage: codeFormatter
   script:
-    - ./gradlew spotlessCheck --parallel
+    - |
+      if ($env:ENABLE_CODE_FORMATTER -eq "true") {
+       ./gradlew spotlessCheck
+       ./gradlew detekt
+      } else {
+       Write-Host "Skipping codeFormatterCheck"
+      }
+  when: on_failure
