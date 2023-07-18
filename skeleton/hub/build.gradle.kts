@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "skeleton.hub"
+    namespace = "${ProjectConfig.PROJECT_NAME}.hub"
     compileSdk = AppConfig.COMPILE_SDK
 
     defaultConfig {
@@ -37,7 +37,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }

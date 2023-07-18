@@ -10,6 +10,7 @@
               <build path="$PROJECT_DIR$/build-logic" name="build-logic">
                 <projects>
                   <project path="$PROJECT_DIR$/build-logic" />
+                  <project path="$PROJECT_DIR$/build-logic/configuration" />
                   <project path="$PROJECT_DIR$/build-logic/convention" />
                 </projects>
               </build>
@@ -24,6 +25,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/build-logic" />
+            <option value="$PROJECT_DIR$/build-logic/configuration" />
             <option value="$PROJECT_DIR$/build-logic/convention" />
             <option value="$PROJECT_DIR$/ocean-android-base" />
             <option value="$PROJECT_DIR$/ocean-android-base/abstraction" />

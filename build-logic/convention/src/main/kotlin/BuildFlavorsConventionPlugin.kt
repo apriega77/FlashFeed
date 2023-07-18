@@ -22,8 +22,13 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                                 "ENABLE_SECURITY",
                                 "${AppConfig.ENABLE_SECURITY}",
                             )
+                            buildConfigField(
+                                "String",
+                                TesterConfig.GROUP_KEY,
+                                "\"${TesterConfig.GROUP_TESTER_DEV}\"",
+                            )
                             versionName = AppConfig.generateVersionBuild()
-                            resValue("string", "app_name", "skeleton code-dev")
+                            resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-dev")
                         }
                         create("sit") {
                             applicationId = AppConfig.APPLICATION_ID
@@ -33,8 +38,13 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                                 "ENABLE_SECURITY",
                                 "${AppConfig.ENABLE_SECURITY}",
                             )
+                            buildConfigField(
+                                "String",
+                                TesterConfig.GROUP_KEY,
+                                "\"${TesterConfig.GROUP_TESTER_SIT}\"",
+                            )
                             versionName = AppConfig.generateVersionBuild()
-                            resValue("string", "app_name", "skeleton code-sit")
+                            resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-sit")
                         }
                         create("uat") {
                             applicationId = AppConfig.APPLICATION_ID
@@ -44,12 +54,17 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                                 "ENABLE_SECURITY",
                                 "${AppConfig.ENABLE_SECURITY}",
                             )
-                            resValue("string", "app_name", "skeleton code-uat")
+                            buildConfigField(
+                                "String",
+                                TesterConfig.GROUP_KEY,
+                                "\"${TesterConfig.GROUP_TESTER_UAT}\"",
+                            )
+                            resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-uat")
                         }
                         create("prod") {
                             applicationId = AppConfig.APPLICATION_ID
                             buildConfigField("boolean", "ENABLE_SECURITY", "${true}")
-                            resValue("string", "app_name", "skeleton code")
+                            resValue("string", "app_name", ProjectConfig.PROJECT_NAME)
                         }
                     }
                 }
