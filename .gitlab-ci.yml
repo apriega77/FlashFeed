@@ -3,6 +3,7 @@ image: mingc/android-build-box:latest
 stages:
   - cloneRepo
   - codeFormatter
+  - test
   - buildAndDistribute
 
 cache:
@@ -70,3 +71,9 @@ codeFormatterCheck:
       } else {
        Write-Host "Skipping codeFormatterCheck"
       }
+
+
+unitTest:
+  stage: test
+  script:
+    - ./gradlew test
