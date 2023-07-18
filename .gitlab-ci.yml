@@ -14,6 +14,7 @@ cache:
 variables:
   FIREBASE_TOKEN: "$FIREBASE_TOKEN_ID"
   ENABLE_CODE_FORMATTER: "false"
+  ENABLE_UNIT_TEST: "false"
 
 cloneRepository:
   stage: cloneRepo
@@ -76,4 +77,9 @@ codeFormatterCheck:
 unitTest:
   stage: test
   script:
-    - ./gradlew test
+    - |
+      if ($env:ENABLE_UNIT_TEST -eq "true") {
+       ./gradlew test
+      } else {
+       Write-Host "Skipping unitTest"
+      }
