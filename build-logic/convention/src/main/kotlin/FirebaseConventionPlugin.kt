@@ -11,7 +11,7 @@ class FirebaseConventionPlugin : Plugin<Project> {
                 apply("com.google.firebase.appdistribution")
                 apply("com.google.firebase.crashlytics")
                 apply("com.google.firebase.firebase-perf")
-                 apply("com.google.gms.google-services")
+                apply("com.google.gms.google-services")
             }
 
             androidAppConfiguration {
@@ -25,7 +25,6 @@ class FirebaseConventionPlugin : Plugin<Project> {
                     }
                 }
             }
-
 
             dependencies {
                 val bom = libs.findLibrary("firebase-bom").get()
@@ -41,7 +40,8 @@ class FirebaseConventionPlugin : Plugin<Project> {
         val releaseNotesFile = File("RELEASE_NOTES.txt")
         val maxCommitMessages = 9
         val commitMessages = getLatestCommitMessages(maxCommitMessages)
-        val existingNotes = if (releaseNotesFile.exists()) releaseNotesFile.readLines() else emptyList()
+        val existingNotes =
+            if (releaseNotesFile.exists()) releaseNotesFile.readLines() else emptyList()
         val combinedNotes = (commitMessages + existingNotes).take(maxCommitMessages)
         releaseNotesFile.writeText(combinedNotes.joinToString("\n"))
         releaseNotesFile.appendText("\n")
