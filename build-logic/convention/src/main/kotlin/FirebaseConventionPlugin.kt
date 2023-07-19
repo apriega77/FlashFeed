@@ -18,7 +18,7 @@ class FirebaseConventionPlugin : Plugin<Project> {
                 productFlavors.forEach { flavor ->
                     updateReleaseNotes()
                     firebaseAppDistributionConfiguration {
-                        groups = "ocean"
+                        groups = flavor.buildConfigFields[TesterConfig.GROUP_KEY]?.value
                         releaseNotesFile = "${rootProject.projectDir}/RELEASE_NOTES.txt"
                         flavor.versionName = AppConfig.generateVersionBuild()
                         flavor.versionCode = AppConfig.VERSION_CODE

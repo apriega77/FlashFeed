@@ -13,17 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@Suppress("UnstableApiUsage")
-dependencyResolutionManagement {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    versionCatalogs {
-        create("libs") {
-            from(files("../gradle/libs.versions.toml"))
-        }
-    }
+plugins {
+    `kotlin-dsl`
 }
-
-include(":convention", ":configuration")

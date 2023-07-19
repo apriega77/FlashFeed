@@ -1,5 +1,11 @@
 @file:Suppress("UnstableApiUsage")
 
+import ProjectConfig.ABSTRACTION_LAYER
+import ProjectConfig.DATA_LAYER
+import ProjectConfig.MODEL_LAYER
+import ProjectConfig.PRESENTATION_LAYER
+import ProjectConfig.PROJECT_NAME
+import ProjectConfig.USECASE_LAYER
 import catalog.androidBaseLibs
 import catalog.libs
 import modules.AbstractionModules
@@ -17,15 +23,6 @@ import org.gradle.kotlin.dsl.withType
 import java.io.File
 
 class BuilderConventionPlugin : Plugin<Project> {
-    companion object {
-        private const val PROJECT_NAME = "skeleton"
-
-        private const val ABSTRACTION_LAYER = "abstraction"
-        private const val DATA_LAYER = "data"
-        private const val MODEL_LAYER = "model"
-        private const val PRESENTATION_LAYER = "presentation"
-        private const val USECASE_LAYER = "usecase"
-    }
 
     override fun apply(target: Project) {
         target.childProjects.values.forEach {
