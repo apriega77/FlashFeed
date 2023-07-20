@@ -1,3 +1,5 @@
+import modules.PresentationModules
+
 /*
  * Copyright 2023 PT Samudra Inovasi Teknologi
  *
@@ -15,14 +17,15 @@
  */
 dependencies {
     /*
-       * Configures the dependency notations for this project in version catalog.
-       * Version catalog located in "gradle/libs.versions.toml"
-       * Example:
-       *
-       *    dependencies {
-       *        api(libs.bundles.skeleton.presentation.base.api)
-       *    }
-       *
-       * After you modified that file, make sure your dependencies sync properly
-       */
+    * Configures the dependency notations for this project in version catalog.
+    * Version catalog located in "gradle/libs.versions.toml"
+    * Example:
+    *
+    *    dependencies {
+    *        api(libs.bundles.skeleton.presentation.core.api)
+    *    }
+    *
+    * After you modified that file, make sure your dependencies sync properly
+    */
+    api(project(":skeleton:hub"))
 }

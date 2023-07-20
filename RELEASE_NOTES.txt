@@ -1,9 +1,9 @@
-:memo: setup docs
+Implement DeepLink
 
-Merge branch 'feature/check_spotless/master' into 'development'
+Merge branch 'feature/configuration' into 'development'
 
-run the spotlessCheck task after buildAndDistribute task
+:sparkles: setup configuration
 
-See merge request sedayux/ocean-skeleton!3
-run the spotlessCheck task after buildAndDistribute task
+See merge request sedayux/ocean-skeleton!6
+:sparkles: setup configuration
 

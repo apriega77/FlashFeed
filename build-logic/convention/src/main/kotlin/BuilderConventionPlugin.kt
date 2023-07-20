@@ -84,7 +84,7 @@ class BuilderConventionPlugin : Plugin<Project> {
         androidLibConfiguration {
             tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
                 kotlinOptions.languageVersion = "1.9"
-                kotlinOptions.jvmTarget = "1.8"
+                kotlinOptions.jvmTarget = AppConfig.JVM_TARGET.toString()
             }
             namespace = "$PROJECT_NAME.$name.$currentName"
             compileSdk = AppConfig.COMPILE_SDK
@@ -106,8 +106,8 @@ class BuilderConventionPlugin : Plugin<Project> {
                 }
             }
             compileOptions {
-                sourceCompatibility = JavaVersion.VERSION_1_8
-                targetCompatibility = JavaVersion.VERSION_1_8
+                sourceCompatibility = AppConfig.JVM_TARGET
+                targetCompatibility = AppConfig.JVM_TARGET
             }
             if (name == PRESENTATION_LAYER) {
                 buildFeatures {
@@ -159,6 +159,7 @@ class BuilderConventionPlugin : Plugin<Project> {
                 PRESENTATION_LAYER -> {
                     if (name == "base") {
                         api(project(":ocean-android-base:presentation"))
+                        api(project(":ocean-ui-component:widget"))
                     } else {
                         presentation(PresentationModules.Base)
                     }

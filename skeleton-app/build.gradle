@@ -3,22 +3,32 @@ plugins {
     id 'org.jetbrains.kotlin.android'
     id 'co.id.samudrainovasi.buildFlavorsPlugin'
     id 'co.id.samudrainovasi.firebasePlugin'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+
 }
 
 android {
     namespace 'co.id.samudrainovasi.skeleton'
-    compileSdk 33
+    compileSdk AppConfig.COMPILE_SDK
 
     defaultConfig {
         applicationId "${AppConfig.APPLICATION_ID}"
-        minSdk 24
-        targetSdk 33
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        minSdk AppConfig.MIN_SDK
+        versionCode AppConfig.VERSION_CODE
     }
-
+    packaging {
+        resources.excludes.add("META-INF/DEPENDENCIES")
+        resources.excludes.add("META-INF/LICENSE.md")
+        resources.excludes.add("META-INF/LICENSE.txt")
+        resources.excludes.add("META-INF/license.txt")
+        resources.excludes.add("META-INF/NOTICE")
+        resources.excludes.add("META-INF/NOTICE.txt")
+        resources.excludes.add("META-INF/notice.txt")
+        resources.excludes.add("META-INF/ASL2.0")
+        resources.excludes.add("META-INF/*.kotlin_module")
+        resources.excludes.add("META-INF/LICENSE-notice.md")
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -26,20 +36,22 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '1.8'
+        jvmTarget = JavaVersion.VERSION_17
     }
 }
 
 dependencies {
 
+    project(':skeleton:presentation').childProjects.values().each { subproject ->
+        implementation project(subproject.path)
+    }
+    implementation(project(":ocean-android-base:model"))
+    implementation(project(":ocean-android-base:hub"))
+    implementation 'com.google.dagger:hilt-android:2.47'
+    kapt 'com.google.dagger:hilt-android-compiler:2.47'
     implementation 'androidx.core:core-ktx:1.10.1'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

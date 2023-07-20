@@ -58,7 +58,7 @@ firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "
 firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "firebasePerfPlugin" }
 gms = { id = "com.google.gms.google-services", version.ref = "gmsPlugin" }
 hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version = "1.8.20" }
 ocean-convention-builder = { id = "co.id.samudrainovasi.builderPlugin", version = "1" }
 ocean-convention-detekt = { id = "co.id.samudrainovasi.detektPlugin", version = "1" }
 ocean-convention-spotless = { id = "co.id.samudrainovasi.spotlessPlugin", version = "1" }

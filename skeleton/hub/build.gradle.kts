@@ -13,8 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-@file:Suppress("UnstableApiUsage")
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -22,7 +20,7 @@ plugins {
 }
 
 android {
-    namespace = "${ProjectConfig.PROJECT_NAME}.hub"
+    namespace = "skeleton.hub"
     compileSdk = AppConfig.COMPILE_SDK
 
     defaultConfig {
@@ -42,14 +40,14 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = AppConfig.JVM_TARGET
+        targetCompatibility = AppConfig.JVM_TARGET
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = AppConfig.JVM_TARGET.toString()
     }
 }
 
 dependencies {
-//    api(project(":ocean-android-base:hub"))
+    api(project(":ocean-android-base:hub"))
 }

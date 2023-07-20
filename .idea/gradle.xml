@@ -35,6 +35,9 @@
             <option value="$PROJECT_DIR$/ocean-android-base/presentation" />
             <option value="$PROJECT_DIR$/ocean-android-base/unit-test" />
             <option value="$PROJECT_DIR$/ocean-android-base/usecase" />
+            <option value="$PROJECT_DIR$/ocean-ui-component" />
+            <option value="$PROJECT_DIR$/ocean-ui-component/theme" />
+            <option value="$PROJECT_DIR$/ocean-ui-component/widget" />
             <option value="$PROJECT_DIR$/skeleton" />
             <option value="$PROJECT_DIR$/skeleton-app" />
             <option value="$PROJECT_DIR$/skeleton/abstraction" />
@@ -46,6 +49,7 @@
             <option value="$PROJECT_DIR$/skeleton/model/base" />
             <option value="$PROJECT_DIR$/skeleton/presentation" />
             <option value="$PROJECT_DIR$/skeleton/presentation/base" />
+            <option value="$PROJECT_DIR$/skeleton/presentation/core" />
             <option value="$PROJECT_DIR$/skeleton/usecase" />
             <option value="$PROJECT_DIR$/skeleton/usecase/base" />
           </set>
