@@ -20,7 +20,7 @@ plugins {
 }
 
 android {
-    namespace = "skeleton.hub"
+    namespace = "${ProjectConfig.PROJECT_NAME}.hub"
     compileSdk = AppConfig.COMPILE_SDK
 
     defaultConfig {
