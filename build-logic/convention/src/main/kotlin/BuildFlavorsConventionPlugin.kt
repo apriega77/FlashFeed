@@ -14,9 +14,9 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                 this.apply {
                     flavorDimensions.add("default")
                     productFlavors {
-                        create("dev") {
+                        create(FlavorConfig.DEV.flavorName) {
                             applicationId = AppConfig.APPLICATION_ID
-                            applicationIdSuffix = ".dev"
+                            applicationIdSuffix = ".${FlavorConfig.DEV.flavorName}"
                             buildConfigField(
                                 "boolean",
                                 "ENABLE_SECURITY",
@@ -30,9 +30,9 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                             versionName = AppConfig.generateVersionBuild()
                             resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-dev")
                         }
-                        create("sit") {
+                        create(FlavorConfig.SIT.flavorName) {
                             applicationId = AppConfig.APPLICATION_ID
-                            applicationIdSuffix = ".sit"
+                            applicationIdSuffix = ".${FlavorConfig.SIT.flavorName}"
                             buildConfigField(
                                 "boolean",
                                 "ENABLE_SECURITY",
@@ -46,9 +46,9 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                             versionName = AppConfig.generateVersionBuild()
                             resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-sit")
                         }
-                        create("uat") {
+                        create(FlavorConfig.UAT.flavorName) {
                             applicationId = AppConfig.APPLICATION_ID
-                            applicationIdSuffix = ".uat"
+                            applicationIdSuffix = ".${FlavorConfig.UAT.flavorName}"
                             buildConfigField(
                                 "boolean",
                                 "ENABLE_SECURITY",
@@ -61,7 +61,7 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                             )
                             resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-uat")
                         }
-                        create("prod") {
+                        create(FlavorConfig.PROD.flavorName) {
                             applicationId = AppConfig.APPLICATION_ID
                             buildConfigField("boolean", "ENABLE_SECURITY", "${true}")
                             resValue("string", "app_name", ProjectConfig.PROJECT_NAME)

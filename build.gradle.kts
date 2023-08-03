@@ -33,8 +33,9 @@ plugins {
     alias(libs.plugins.kotlin.android) apply false
     alias(libs.plugins.ocean.convention.builder)
     alias(libs.plugins.ocean.convention.spotless) apply false
-    alias(libs.plugins.spotless) apply false
+    alias(libs.plugins.spotless)
     alias(libs.plugins.dokka) apply false
+    alias(libs.plugins.jvm) apply false
 }
 
 allprojects {

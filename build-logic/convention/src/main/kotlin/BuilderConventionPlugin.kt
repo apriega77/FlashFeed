@@ -6,20 +6,19 @@ import ProjectConfig.MODEL_LAYER
 import ProjectConfig.PRESENTATION_LAYER
 import ProjectConfig.PROJECT_NAME
 import ProjectConfig.USECASE_LAYER
-import catalog.androidBaseLibs
-import catalog.libs
+import catalog.findApi
+import catalog.findKapt
+import catalog.findVersion
 import modules.AbstractionModules
 import modules.DataModules
 import modules.ModelModules
 import modules.PresentationModules
 import modules.UsecaseModules
-import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.configurationcache.extensions.capitalized
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.project
-import org.gradle.kotlin.dsl.withType
 import java.io.File
 
 class BuilderConventionPlugin : Plugin<Project> {
@@ -82,10 +81,6 @@ class BuilderConventionPlugin : Plugin<Project> {
     private fun Project.configureAndroid(name: String) {
         val currentName = this.name
         androidLibConfiguration {
-            tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
-                kotlinOptions.languageVersion = "1.9"
-                kotlinOptions.jvmTarget = AppConfig.JVM_TARGET.toString()
-            }
             namespace = "$PROJECT_NAME.$name.$currentName"
             compileSdk = AppConfig.COMPILE_SDK
 
@@ -117,7 +112,7 @@ class BuilderConventionPlugin : Plugin<Project> {
 
                 composeOptions {
                     kotlinCompilerExtensionVersion =
-                        androidBaseLibs.findVersion("androidxComposeCompiler").get().toString()
+                        findVersion("androidxComposeCompiler")
                 }
             }
         }
@@ -144,8 +139,8 @@ class BuilderConventionPlugin : Plugin<Project> {
                     abstraction(findModule(), true)
                     usecase(findModule())
                     model(findModule())
-                    add("kapt", libs.findLibrary("hilt.compiler").get())
-                    add("api", libs.findLibrary("hilt.android").get())
+                    findKapt("hilt.compiler")
+                    findApi("hilt.android")
                 }
 
                 MODEL_LAYER -> {
@@ -165,8 +160,8 @@ class BuilderConventionPlugin : Plugin<Project> {
                     }
                     usecase(findModule())
                     model(findModule())
-                    add("kapt", libs.findLibrary("hilt.compiler").get())
-                    add("api", libs.findLibrary("hilt.android").get())
+                    findKapt("hilt.compiler")
+                    findApi("hilt.android")
                 }
 
                 USECASE_LAYER -> {

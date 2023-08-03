@@ -41,17 +41,31 @@
             <option value="$PROJECT_DIR$/skeleton" />
             <option value="$PROJECT_DIR$/skeleton-app" />
             <option value="$PROJECT_DIR$/skeleton/abstraction" />
+            <option value="$PROJECT_DIR$/skeleton/abstraction/authentication" />
             <option value="$PROJECT_DIR$/skeleton/abstraction/base" />
+            <option value="$PROJECT_DIR$/skeleton/abstraction/core" />
+            <option value="$PROJECT_DIR$/skeleton/abstraction/onboarding" />
             <option value="$PROJECT_DIR$/skeleton/data" />
+            <option value="$PROJECT_DIR$/skeleton/data/authentication" />
             <option value="$PROJECT_DIR$/skeleton/data/base" />
+            <option value="$PROJECT_DIR$/skeleton/data/core" />
+            <option value="$PROJECT_DIR$/skeleton/data/onboarding" />
             <option value="$PROJECT_DIR$/skeleton/hub" />
             <option value="$PROJECT_DIR$/skeleton/model" />
+            <option value="$PROJECT_DIR$/skeleton/model/authentication" />
             <option value="$PROJECT_DIR$/skeleton/model/base" />
+            <option value="$PROJECT_DIR$/skeleton/model/core" />
+            <option value="$PROJECT_DIR$/skeleton/model/onboarding" />
             <option value="$PROJECT_DIR$/skeleton/presentation" />
+            <option value="$PROJECT_DIR$/skeleton/presentation/authentication" />
             <option value="$PROJECT_DIR$/skeleton/presentation/base" />
             <option value="$PROJECT_DIR$/skeleton/presentation/core" />
+            <option value="$PROJECT_DIR$/skeleton/presentation/onboarding" />
             <option value="$PROJECT_DIR$/skeleton/usecase" />
+            <option value="$PROJECT_DIR$/skeleton/usecase/authentication" />
             <option value="$PROJECT_DIR$/skeleton/usecase/base" />
+            <option value="$PROJECT_DIR$/skeleton/usecase/core" />
+            <option value="$PROJECT_DIR$/skeleton/usecase/onboarding" />
           </set>
         </option>
       </GradleProjectSettings>
