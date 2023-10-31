@@ -1,6 +1,5 @@
 package flashfeed.abstraction.core
 
-
 import flashfeed.model.core.Channel
 
 interface CoreRepository {

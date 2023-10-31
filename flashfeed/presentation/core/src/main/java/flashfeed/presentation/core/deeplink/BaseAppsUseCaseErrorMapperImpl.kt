@@ -1,12 +1,12 @@
 package flashfeed.presentation.core.deeplink
 
+import flashfeed.model.base.BaseAppsError
+import flashfeed.model.base.network.BaseAppsApiException
+import flashfeed.presentation.base.BaseAppsUseCaseErrorMapper
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.launch
-import flashfeed.model.base.BaseAppsError
-import flashfeed.model.base.network.BaseAppsApiException
-import flashfeed.presentation.base.BaseAppsUseCaseErrorMapper
 
 class BaseAppsUseCaseErrorMapperImpl : BaseAppsUseCaseErrorMapper {
     private val _errorEvents = MutableSharedFlow<BaseAppsError>()

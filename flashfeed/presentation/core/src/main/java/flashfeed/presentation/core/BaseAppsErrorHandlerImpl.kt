@@ -4,19 +4,17 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import base.presentation.deeplink.DeepLinkRouter
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
 import flashfeed.model.base.BaseAppsError
 import flashfeed.model.base.Callback
 import flashfeed.model.base.GenericErrorModel
 import flashfeed.presentation.base.BaseAppsErrorHandler
 import flashfeed.presentation.base.BaseAppsUseCaseErrorMapper
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 
 class BaseAppsErrorHandlerImpl(
     override val activity: FragmentActivity,
     private val errorMapper: BaseAppsUseCaseErrorMapper,
-    private val deepLinkRouter: DeepLinkRouter,
 ) : BaseAppsErrorHandler {
 
     init {
@@ -46,7 +44,6 @@ class BaseAppsErrorHandlerImpl(
 
     @Suppress("UnusedParameter", "UnusedPrivateMember")
     private fun showErrorSheet(model: GenericErrorModel) {
-
     }
 
     override fun listenEvent(callback: (Unit) -> Unit) {

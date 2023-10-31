@@ -30,37 +30,6 @@ class BuildFlavorsConventionPlugin : Plugin<Project> {
                             versionName = AppConfig.generateVersionBuild()
                             resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-dev")
                         }
-                        create(FlavorConfig.SIT.flavorName) {
-                            applicationId = AppConfig.APPLICATION_ID
-                            applicationIdSuffix = ".${FlavorConfig.SIT.flavorName}"
-                            buildConfigField(
-                                "boolean",
-                                "ENABLE_SECURITY",
-                                "${AppConfig.ENABLE_SECURITY}",
-                            )
-                            buildConfigField(
-                                "String",
-                                TesterConfig.GROUP_KEY,
-                                "\"${TesterConfig.GROUP_TESTER_SIT}\"",
-                            )
-                            versionName = AppConfig.generateVersionBuild()
-                            resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-sit")
-                        }
-                        create(FlavorConfig.UAT.flavorName) {
-                            applicationId = AppConfig.APPLICATION_ID
-                            applicationIdSuffix = ".${FlavorConfig.UAT.flavorName}"
-                            buildConfigField(
-                                "boolean",
-                                "ENABLE_SECURITY",
-                                "${AppConfig.ENABLE_SECURITY}",
-                            )
-                            buildConfigField(
-                                "String",
-                                TesterConfig.GROUP_KEY,
-                                "\"${TesterConfig.GROUP_TESTER_UAT}\"",
-                            )
-                            resValue("string", "app_name", "${ProjectConfig.PROJECT_NAME}-uat")
-                        }
                         create(FlavorConfig.PROD.flavorName) {
                             applicationId = AppConfig.APPLICATION_ID
                             buildConfigField("boolean", "ENABLE_SECURITY", "${true}")

@@ -1,0 +1,6 @@
+package flashfeed.hub.base
+
+interface RouterHandler {
+    fun onNavigated(contract: BaseContract<*, *>)
+    fun onRouteNotFound(className: String)
+}

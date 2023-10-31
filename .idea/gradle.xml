@@ -32,19 +32,25 @@
             <option value="$PROJECT_DIR$/flashfeed/abstraction" />
             <option value="$PROJECT_DIR$/flashfeed/abstraction/base" />
             <option value="$PROJECT_DIR$/flashfeed/abstraction/core" />
+            <option value="$PROJECT_DIR$/flashfeed/abstraction/home" />
             <option value="$PROJECT_DIR$/flashfeed/data" />
             <option value="$PROJECT_DIR$/flashfeed/data/base" />
             <option value="$PROJECT_DIR$/flashfeed/data/core" />
+            <option value="$PROJECT_DIR$/flashfeed/data/home" />
             <option value="$PROJECT_DIR$/flashfeed/hub" />
             <option value="$PROJECT_DIR$/flashfeed/model" />
             <option value="$PROJECT_DIR$/flashfeed/model/base" />
             <option value="$PROJECT_DIR$/flashfeed/model/core" />
+            <option value="$PROJECT_DIR$/flashfeed/model/home" />
             <option value="$PROJECT_DIR$/flashfeed/presentation" />
             <option value="$PROJECT_DIR$/flashfeed/presentation/base" />
             <option value="$PROJECT_DIR$/flashfeed/presentation/core" />
+            <option value="$PROJECT_DIR$/flashfeed/presentation/home" />
+            <option value="$PROJECT_DIR$/flashfeed/presentation/onboarding" />
             <option value="$PROJECT_DIR$/flashfeed/usecase" />
             <option value="$PROJECT_DIR$/flashfeed/usecase/base" />
             <option value="$PROJECT_DIR$/flashfeed/usecase/core" />
+            <option value="$PROJECT_DIR$/flashfeed/usecase/home" />
           </set>
         </option>
       </GradleProjectSettings>

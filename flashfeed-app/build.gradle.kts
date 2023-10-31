@@ -19,8 +19,8 @@ import catalog.findKapt
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("co.id.apriega77.buildFlavorsPlugin")
-    //id("co.id.apriega77.firebasePlugin")
+    id("com.apriega77.flashfeed.buildFlavorsPlugin")
+    //id("com.apriega77.flashfeedfirebasePlugin")
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
 }
@@ -68,15 +68,14 @@ android {
 dependencies {
     findKapt("hilt.compiler")
     findApi("hilt.android")
-    rootProject.childProjects[ProjectConfig.PROJECT_NAME]?.childProjects?.get("presentation")?.childProjects?.forEach {
+    rootProject.childProjects[ProjectConfig.PROJECT_NAME.lowercase()]?.childProjects?.get("presentation")?.childProjects?.forEach {
         api(project(it.value.path))
     }
-    rootProject.childProjects[ProjectConfig.PROJECT_NAME]?.childProjects?.get("data")?.childProjects?.forEach {
+    rootProject.childProjects[ProjectConfig.PROJECT_NAME.lowercase()]?.childProjects?.get("data")?.childProjects?.forEach {
         implementation(project(it.value.path))
     }
 
     implementation(project(mapOf("path" to ":flashfeed:hub")))
-
     implementation(libs.core.ktx)
     implementation(libs.material)
     implementation(project(":flashfeed:abstraction:core"))

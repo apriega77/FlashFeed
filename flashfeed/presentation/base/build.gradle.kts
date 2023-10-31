@@ -25,7 +25,8 @@ dependencies {
        *
        * After you modified that file, make sure your dependencies sync properly
        */
-    api(project(":${ProjectConfig.PROJECT_NAME}:hub"))
+    api(project(":${ProjectConfig.PROJECT_NAME.lowercase()}:hub"))
     api(platform(androidBaseLibs.androidx.compose.bom))
     api(androidBaseLibs.bundles.android.base.presentation.api)
+    api(libs.hilt.compose)
 }

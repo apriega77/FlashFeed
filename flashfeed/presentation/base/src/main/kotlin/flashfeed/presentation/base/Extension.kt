@@ -1,8 +1,8 @@
 package flashfeed.presentation.base
 
 import androidx.lifecycle.viewModelScope
-import kotlinx.coroutines.CoroutineScope
 import flashfeed.model.base.BaseAppsError
+import kotlinx.coroutines.CoroutineScope
 
 fun BaseViewModel.createLauncher(baseAppsUseCaseErrorMapper: BaseAppsUseCaseErrorMapper) =
     object : UseCaseLauncher<BaseAppsError, BaseAppsUseCaseErrorMapper> {

@@ -1,7 +1,6 @@
 package flashfeed.data.core.di
 
 import android.content.Context
-import flashfeed.model.base.BuildFlavor
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.chuckerteam.chucker.api.RetentionManager
@@ -10,14 +9,15 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import okhttp3.logging.HttpLoggingInterceptor
-import retrofit2.Retrofit
 import flashfeed.data.base.RetrofitNoToken
 import flashfeed.data.core.datasource.ServerDataSource
 import flashfeed.data.core.network.HeaderInterceptor
 import flashfeed.data.core.network.RetrofitBuilder
 import flashfeed.data.core.network.TokenHeaderInterceptor
+import flashfeed.model.base.BuildFlavor
 import flashfeed.model.core.ServerConfig
+import okhttp3.logging.HttpLoggingInterceptor
+import retrofit2.Retrofit
 import javax.inject.Singleton
 
 @Module

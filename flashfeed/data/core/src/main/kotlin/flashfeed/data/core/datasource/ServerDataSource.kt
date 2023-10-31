@@ -1,7 +1,7 @@
 package flashfeed.data.core.datasource
 
-import flashfeed.model.base.BuildFlavor
 import flashfeed.data.core.network.DefaultServerConfig
+import flashfeed.model.base.BuildFlavor
 import flashfeed.model.core.ServerConfig
 
 class ServerDataSource {

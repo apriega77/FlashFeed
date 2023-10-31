@@ -45,19 +45,19 @@ dependencies {
 gradlePlugin {
     plugins {
         register("builder") {
-            id = "co.id.apriega77.builderPlugin"
+            id = "com.apriega77.flashfeed.builderPlugin"
             implementationClass = "BuilderConventionPlugin"
         }
         register("firebase") {
-            id = "co.id.apriega77.firebasePlugin"
+            id = "com.apriega77.flashfeed.firebasePlugin"
             implementationClass = "FirebaseConventionPlugin"
         }
         register("flavors") {
-            id = "co.id.apriega77.buildFlavorsPlugin"
+            id = "com.apriega77.flashfeed.buildFlavorsPlugin"
             implementationClass = "BuildFlavorsConventionPlugin"
         }
         register("spotless") {
-            id = "co.id.apriega77.spotlessPlugin"
+            id = "com.apriega77.flashfeed.spotlessPlugin"
             implementationClass = "SpotlessConventionPlugin"
         }
     }

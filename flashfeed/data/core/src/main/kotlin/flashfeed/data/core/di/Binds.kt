@@ -17,5 +17,4 @@ abstract class Binds {
     abstract fun bindCoreRepo(
         coreRepositoryImpl: CoreRepositoryImpl,
     ): CoreRepository
-
 }

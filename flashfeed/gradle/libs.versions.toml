@@ -17,6 +17,7 @@ androidxComposeTracing = "1.0.0-alpha03"
 androidxSecurityCrypto = "1.1.0-alpha03"
 androidxComposeCompiler = "1.5.1"
 annotation = "1.6.0"
+androidx-navigation = "2.5.2"
 chucker = "3.5.2"
 kotlinxCoroutines = "1.7.1"
 loggingInterceptor = "4.11.0"
@@ -27,6 +28,8 @@ appcompat = "1.6.1"
 androidxConstraintLayout = "1.0.1"
 shimmer = "1.0.3"
 coil = "2.4.0"
+material = "1.9.0"
+
 #----------------------------------------------------------------
 
 #This section lists the libraries used in your project.
@@ -38,12 +41,15 @@ accompanist-pager = { group = "com.google.accompanist", name = "accompanist-page
 accompanist-pager-indicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanistPagerIndicator" }
 accompanist-navigation-animation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanistPagerAnimation" }
 accompanist-swiperefresh = { group = "com.google.accompanist", name = "accompanist-swiperefresh", version.ref = "accompanistPagerSwipeRefresh" }
+accompanist-webview = { module = "com.google.accompanist:accompanist-webview", version.ref = "accompanist" }
+
+
 
 androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "androidxSecurityCrypto" }
 
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
 androidx-compose-compiler = { group = "androidx.compose.compiler", name = "compiler", version.ref = "androidxComposeCompiler" }
-
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "androidx-navigation" }
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "androidxConstraintLayout" }
@@ -84,6 +90,7 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 mockk = { group = "io.mockk", name = "mockk", version = "1.13.5" }
 junit = { group = "junit", name = "junit", version = "4.13.2" }
 
+material-theme = { group = "com.google.android.material", name = "material", version.ref = "material" }
 #----------------------------------------------------------------
 #This is the section where you can group related libraries into specific bundles.
 #Each bundle has an entry that includes a list of libraries you want to group together.
@@ -126,7 +133,10 @@ android-base-presentation-api = [
     "androidx-fragment",
     "androidx-constraintlayout",
     "valentinilk-shimmer",
-    "io-coil-kt"
+    "io-coil-kt",
+    "accompanist-webview",
+    "material-theme",
+    "androidx-navigation-compose"
 ]
 android-base-model-api = [
     "annotation"

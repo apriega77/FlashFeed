@@ -25,7 +25,7 @@ class BuilderConventionPlugin : Plugin<Project> {
 
     override fun apply(target: Project) {
         target.childProjects.values.forEach {
-            if (it.name == PROJECT_NAME) {
+            if (it.name == PROJECT_NAME.lowercase()) {
                 handleProject(it)
             }
         }
@@ -80,7 +80,7 @@ class BuilderConventionPlugin : Plugin<Project> {
     private fun Project.configureAndroid(name: String) {
         val currentName = this.name
         androidLibConfiguration {
-            namespace = "$PROJECT_NAME.$name.$currentName"
+            namespace = "${PROJECT_NAME.lowercase()}.$name.${currentName}"
             compileSdk = AppConfig.COMPILE_SDK
 
             defaultConfig {
@@ -208,7 +208,7 @@ class BuilderConventionPlugin : Plugin<Project> {
 
         val listClass: List<String> = this.childProjects.map {
             val name = it.value.name.capitalized()
-            val path = ":$PROJECT_NAME:${this.name}:${it.key}"
+            val path = ":${PROJECT_NAME.lowercase()}:${this.name}:${it.key}"
             "\tobject $name : ${this.name.capitalized()}(\"$path\",\"${it.key}\")"
         }
         return listClass.sorted().joinToString(separator = "\n") { it }

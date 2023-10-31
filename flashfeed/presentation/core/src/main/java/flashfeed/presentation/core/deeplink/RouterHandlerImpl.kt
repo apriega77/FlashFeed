@@ -1,8 +1,8 @@
 package flashfeed.presentation.core.deeplink
 
 import androidx.fragment.app.FragmentActivity
-import base.BaseContract
-import base.RouterHandler
+import flashfeed.hub.base.BaseContract
+import flashfeed.hub.base.RouterHandler
 
 class RouterHandlerImpl(private val activity: FragmentActivity) : RouterHandler {
     override fun onNavigated(contract: BaseContract<*, *>) {
@@ -14,6 +14,5 @@ class RouterHandlerImpl(private val activity: FragmentActivity) : RouterHandler 
 
     override fun onRouteNotFound(className: String) {
         // handle error
-
     }
 }

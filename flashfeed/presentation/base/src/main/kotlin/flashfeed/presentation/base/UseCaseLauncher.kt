@@ -1,15 +1,15 @@
 package flashfeed.presentation.base
 
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.flow.onEach
-import kotlinx.coroutines.launch
 import flashfeed.model.base.NoArgs
 import flashfeed.model.base.NoResult
 import flashfeed.usecase.base.BaseUseCaseAsync
 import flashfeed.usecase.base.BaseUseCaseFlow
 import flashfeed.usecase.base.BaseUseCaseSync
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
+import kotlinx.coroutines.launch
 
 interface UseCaseLauncher<
     Error,

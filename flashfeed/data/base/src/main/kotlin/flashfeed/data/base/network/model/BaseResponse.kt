@@ -1,5 +1,5 @@
 package flashfeed.data.base.network.model
 
 open class BaseResponse<T>(
-    open var data: T? = null,
+    open var articles: T? = null,
 ) : BaseEmptyResponse()

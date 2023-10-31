@@ -1,13 +1,12 @@
 package flashfeed.data.core.network
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
-import okhttp3.CertificatePinner
+import flashfeed.model.core.ServerConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import flashfeed.model.core.ServerConfig
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 

@@ -5,7 +5,7 @@ import java.util.Locale
 
 object AppConfig {
     const val COMPILE_SDK = 33
-    const val APPLICATION_ID = "co.id.apriega77.flashfeed"
+    const val APPLICATION_ID = "com.apriega77.flashfeed"
     const val MIN_SDK = 24
     const val VERSION_CODE = 1
     private const val VERSION_NAME = "1.0.0"

@@ -1,12 +1,12 @@
 package flashfeed.data.core.di
 
 import android.content.Context
-import flashfeed.data.base.BasePreference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import flashfeed.data.base.BasePreference
 import javax.inject.Singleton
 
 @Module
