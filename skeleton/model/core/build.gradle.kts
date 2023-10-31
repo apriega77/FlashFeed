@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 PT Samudra Inovasi Teknologi
+ * Copyright 2023 <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,16 @@
  * limitations under the License.
  */
 dependencies {
+    implementation(libs.annotation.jvm)
     /*
-    * Configures the dependency notations for this project in version catalog.
-    * Version catalog located in "gradle/libs.versions.toml"
-    * Example:
-    *
-    *    dependencies {
-    *        api(libs.bundles.skeleton.model.core.api)
-    *    }
-    *
-    * After you modified that file, make sure your dependencies sync properly
-    */
+       * Configures the dependency notations for this project in version catalog.
+       * Version catalog located in "gradle/libs.versions.toml"
+       * Example:
+       *
+       *    dependencies {
+       *        api(libs.bundles.skeleton.model.core.api)
+       *    }
+       *
+       * After you modified that file, make sure your dependencies sync properly
+       */
 }

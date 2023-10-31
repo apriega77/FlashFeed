@@ -4,8 +4,8 @@ import skeleton.model.base.GenericErrorModel
 import java.io.IOException
 
 sealed class BaseAppsApiException : IOException() {
-    object SystemError : BaseAppsApiException()
-    object NetworkError : BaseAppsApiException()
+    data object SystemError : BaseAppsApiException()
+    data object NetworkError : BaseAppsApiException()
     data class SecurityException(val type: Type) : BaseAppsApiException() {
         enum class Type {
             ENCRYPTION_FAILED,

@@ -1,0 +1,133 @@
+###
+# This file is used for managing Gradle dependencies using version catalogs in Android development.
+###
+
+#----------------------------------------------------------------
+
+#This is the section where you define the version of each library and tool used in your Android project.
+#Each entry includes the name of the library or tool, followed by the specific version.
+[versions]
+accompanist = "0.30.1"
+accompanistPager = "0.28.0"
+accompanistPagerAnimation = "0.23.1"
+accompanistPagerIndicator = "0.23.1"
+accompanistPagerSwipeRefresh = "0.26.4-beta"
+androidxComposeBom = "2023.06.01"
+androidxComposeTracing = "1.0.0-alpha03"
+androidxSecurityCrypto = "1.1.0-alpha03"
+androidxComposeCompiler = "1.5.1"
+annotation = "1.6.0"
+chucker = "3.5.2"
+kotlinxCoroutines = "1.7.1"
+loggingInterceptor = "4.11.0"
+retrofit = "2.9.0"
+activity = "1.7.2"
+fragment = "1.6.1"
+appcompat = "1.6.1"
+androidxConstraintLayout = "1.0.1"
+shimmer = "1.0.3"
+coil = "2.4.0"
+#----------------------------------------------------------------
+
+#This section lists the libraries used in your project.
+#Each library has an entry consisting of a group, a name,and a reference version that refers to the version defined in the "Versions" section.
+[libraries]
+accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+accompanist-systemuicontroller = { group = "com.google.accompanist", name = "accompanist-systemuicontroller", version.ref = "accompanist" }
+accompanist-pager = { group = "com.google.accompanist", name = "accompanist-pager", version.ref = "accompanist" }
+accompanist-pager-indicators = { group = "com.google.accompanist", name = "accompanist-pager-indicators", version.ref = "accompanistPagerIndicator" }
+accompanist-navigation-animation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanistPagerAnimation" }
+accompanist-swiperefresh = { group = "com.google.accompanist", name = "accompanist-swiperefresh", version.ref = "accompanistPagerSwipeRefresh" }
+
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto", version.ref = "androidxSecurityCrypto" }
+
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "androidxComposeBom" }
+androidx-compose-compiler = { group = "androidx.compose.compiler", name = "compiler", version.ref = "androidxComposeCompiler" }
+
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-foundation-layout = { group = "androidx.compose.foundation", name = "foundation-layout" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout-compose", version.ref = "androidxConstraintLayout" }
+
+annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+
+valentinilk-shimmer = { group = "com.valentinilk.shimmer", name = "compose-shimmer", version.ref = "shimmer" }
+io-coil-kt = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+
+androidx-compose-material-iconsCore = { group = "androidx.compose.material", name = "material-icons-core" }
+androidx-compose-material-iconsExtended = { group = "androidx.compose.material", name = "material-icons-extended" }
+
+androidx-compose-tracing = { group = "androidx.compose.runtime", name = "runtime-tracing", version.ref = "androidxComposeTracing" }
+
+androidx-compose-ui-test = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+androidx-compose-ui-testManifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-ui-util = { group = "androidx.compose.ui", name = "ui-util" }
+
+chucker = { group = "com.github.chuckerteam.chucker", name = "library", version.ref = "chucker" }
+
+kotlinx-coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version.ref = "kotlinxCoroutines" }
+
+logging-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "loggingInterceptor" }
+
+retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-converter-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+
+androidx-activity = { group = "androidx.activity", name = "activity-ktx", version.ref = "activity" }
+
+androidx-fragment = { group = "androidx.fragment", name = "fragment-ktx", version.ref = "fragment" }
+
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+
+mockk = { group = "io.mockk", name = "mockk", version = "1.13.5" }
+junit = { group = "junit", name = "junit", version = "4.13.2" }
+
+#----------------------------------------------------------------
+#This is the section where you can group related libraries into specific bundles.
+#Each bundle has an entry that includes a list of libraries you want to group together.
+#You can define suffix "implementation, api, test, etc." to add configuration name.
+[bundles]
+android-base-abstraction-api = [
+    "kotlinx-coroutines-core",
+    "kotlinx-coroutines-android"
+]
+android-base-data-api = [
+    "retrofit-core",
+    "retrofit-converter-gson",
+    "androidx-security-crypto",
+    "chucker",
+    "logging-interceptor"
+]
+android-base-hub-api = [
+    "androidx-appcompat",
+    "androidx-activity",
+    "androidx-fragment"
+]
+android-base-presentation-api = [
+    "accompanist-permissions",
+    "accompanist-systemuicontroller",
+    "accompanist-pager",
+    "accompanist-pager-indicators",
+    "accompanist-navigation-animation",
+    "accompanist-swiperefresh",
+    "androidx-compose-foundation",
+    "androidx-compose-foundation-layout",
+    "androidx-compose-material-iconsCore",
+    "androidx-compose-material-iconsExtended",
+    "androidx-compose-ui-test",
+    "androidx-compose-ui-testManifest",
+    "androidx-compose-ui-tooling",
+    "androidx-compose-ui-tooling-preview",
+    "androidx-compose-ui-util",
+    "androidx-compose-compiler",
+    "androidx-compose-tracing",
+    "androidx-fragment",
+    "androidx-constraintlayout",
+    "valentinilk-shimmer",
+    "io-coil-kt"
+]
+android-base-model-api = [
+    "annotation"
+]

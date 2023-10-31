@@ -1,7 +1,7 @@
 package skeleton.presentation.core.deeplink
 
-import base.model.deeplink.DeepLinkData
-import base.model.deeplink.DeepLinkItem
+import skeleton.model.base.deeplink.DeepLinkData
+import skeleton.model.base.deeplink.DeepLinkItem
 import base.presentation.deeplink.DeepLinkDelegator
 import javax.inject.Inject
 

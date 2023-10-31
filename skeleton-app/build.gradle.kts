@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 PT Samudra Inovasi Teknologi
+ * Copyright 2023 <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,8 +19,8 @@ import catalog.findKapt
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    id("co.id.samudrainovasi.buildFlavorsPlugin")
-    id("co.id.samudrainovasi.firebasePlugin")
+    id("co.id.apriega77.buildFlavorsPlugin")
+    //id("co.id.apriega77.firebasePlugin")
     id ("kotlin-kapt")
     id ("dagger.hilt.android.plugin")
 }
@@ -75,7 +75,7 @@ dependencies {
         implementation(project(it.value.path))
     }
 
-    implementation(project(mapOf("path" to ":ocean-android-base:hub")))
+    implementation(project(mapOf("path" to ":skeleton:hub")))
 
     implementation(libs.core.ktx)
     implementation(libs.material)

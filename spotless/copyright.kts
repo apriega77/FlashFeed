@@ -1,5 +1,5 @@
 /*
- * Copyright $YEAR PT Samudra Inovasi Teknologi
+ * Copyright $YEAR <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

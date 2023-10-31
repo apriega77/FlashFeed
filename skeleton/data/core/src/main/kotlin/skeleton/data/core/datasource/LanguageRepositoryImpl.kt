@@ -1,6 +1,6 @@
 // package skeleton.data.core.datasource
 //
-// import LanguageRepository
+// import skeleton.base.abstraction.LanguageRepository
 // import android.content.Context
 // import dagger.hilt.android.qualifiers.ApplicationContext
 // import skeleton.data.base.ApplicationId
@@ -10,7 +10,7 @@
 // class LanguageRepositoryImpl @Inject constructor(
 //    @ApplicationContext private val context: Context,
 //    @ApplicationId private val appId: String,
-// ) : LanguageRepository {
+// ) : skeleton.base.abstraction.LanguageRepository {
 //
 //    private val resource by lazy { context.resources }
 //

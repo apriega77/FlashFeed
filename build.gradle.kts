@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 PT Samudra Inovasi Teknologi
+ * Copyright 2023 <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -31,15 +31,14 @@ plugins {
     alias(libs.plugins.gms) apply false
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.kotlin.android) apply false
-    alias(libs.plugins.ocean.convention.builder)
-    alias(libs.plugins.ocean.convention.spotless) apply false
+    alias(libs.plugins.convention.builder)
+    alias(libs.plugins.convention.spotless) apply false
     alias(libs.plugins.spotless)
     alias(libs.plugins.dokka) apply false
     alias(libs.plugins.jvm) apply false
 }
 
 allprojects {
-    apply(plugin = rootProject.libs.plugins.ocean.convention.detekt.get().pluginId)
-    apply(plugin = rootProject.libs.plugins.ocean.convention.spotless.get().pluginId)
+    apply(plugin = rootProject.libs.plugins.convention.spotless.get().pluginId)
     apply(plugin = rootProject.libs.plugins.dokka.get().pluginId)
 }

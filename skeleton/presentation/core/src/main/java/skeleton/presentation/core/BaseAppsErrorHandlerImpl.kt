@@ -4,7 +4,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import component.widget.bottomsheet.showAsBottomSheet
+import base.presentation.deeplink.DeepLinkRouter
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 import skeleton.model.base.BaseAppsError
@@ -16,7 +16,7 @@ import skeleton.presentation.base.BaseAppsUseCaseErrorMapper
 class BaseAppsErrorHandlerImpl(
     override val activity: FragmentActivity,
     private val errorMapper: BaseAppsUseCaseErrorMapper,
-//    private val deepLinkRouter: DeepLinkRouter,
+    private val deepLinkRouter: DeepLinkRouter,
 ) : BaseAppsErrorHandler {
 
     init {
@@ -46,8 +46,7 @@ class BaseAppsErrorHandlerImpl(
 
     @Suppress("UnusedParameter", "UnusedPrivateMember")
     private fun showErrorSheet(model: GenericErrorModel) {
-        activity.showAsBottomSheet {
-        }
+
     }
 
     override fun listenEvent(callback: (Unit) -> Unit) {

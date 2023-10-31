@@ -2,16 +2,16 @@ package skeleton.presentation.core.deeplink
 
 import android.os.Parcelable
 import androidx.fragment.app.FragmentActivity
-import base.hub.BaseContract
-import base.hub.NavigationData
-import base.hub.RouterHandler
-import base.model.NoResult
-import base.model.Route
-import base.model.deeplink.DeepLinkData
-import base.model.deeplink.DeepLinkItem
-import base.model.deeplink.DeepLinkProperty
+import base.BaseContract
+import base.NavigationData
+import base.RouterHandler
+import skeleton.model.base.deeplink.DeepLinkData
+import skeleton.model.base.deeplink.DeepLinkItem
+import skeleton.model.base.deeplink.DeepLinkProperty
 import base.presentation.deeplink.DeepLinkDelegator
 import base.presentation.deeplink.DeepLinkRouter
+import skeleton.model.base.NoResult
+import skeleton.model.base.Route
 import javax.inject.Inject
 import kotlin.reflect.KClass
 

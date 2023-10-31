@@ -1,7 +1,6 @@
 package skeleton.model.base
 
 import android.os.Parcelable
-import base.model.Image
 import kotlinx.parcelize.Parcelize
 
 @Parcelize

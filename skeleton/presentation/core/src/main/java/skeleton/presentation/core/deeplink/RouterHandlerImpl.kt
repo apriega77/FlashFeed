@@ -1,9 +1,8 @@
 package skeleton.presentation.core.deeplink
 
 import androidx.fragment.app.FragmentActivity
-import base.hub.BaseContract
-import base.hub.RouterHandler
-import component.widget.bottomsheet.showAsBottomSheet
+import base.BaseContract
+import base.RouterHandler
 
 class RouterHandlerImpl(private val activity: FragmentActivity) : RouterHandler {
     override fun onNavigated(contract: BaseContract<*, *>) {
@@ -15,7 +14,6 @@ class RouterHandlerImpl(private val activity: FragmentActivity) : RouterHandler 
 
     override fun onRouteNotFound(className: String) {
         // handle error
-        activity.showAsBottomSheet {
-        }
+
     }
 }

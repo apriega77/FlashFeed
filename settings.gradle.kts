@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 PT Samudra Inovasi Teknologi
+ * Copyright 2023 <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -30,18 +30,12 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("androidBaseLibs") {
-            from(files("ocean-android-base/gradle/libs.versions.toml"))
+            from(files("skeleton/gradle/libs.versions.toml"))
         }
     }
 }
 rootProject.name = "skeleton"
 include(":skeleton-app")
-include(":ocean-android-base:abstraction")
-include(":ocean-android-base:data")
-include(":ocean-android-base:hub")
-include(":ocean-android-base:model")
-include(":ocean-android-base:presentation")
-include(":ocean-android-base:usecase")
 
 include("skeleton:abstraction:base")
 include("skeleton:data:base")
@@ -49,22 +43,8 @@ include("skeleton:model:base")
 include("skeleton:presentation:base")
 include("skeleton:usecase:base")
 include("skeleton:hub")
-include(":ocean-android-base:unit-test")
 include(":skeleton:presentation:core")
 include(":skeleton:model:core")
 include(":skeleton:data:core")
 include(":skeleton:usecase:core")
 include(":skeleton:abstraction:core")
-include(":ocean-ui-component")
-include(":ocean-ui-component:widget")
-include(":ocean-ui-component:theme")
-include(":skeleton:presentation:onboarding")
-include(":skeleton:usecase:onboarding")
-include(":skeleton:abstraction:onboarding")
-include(":skeleton:data:onboarding")
-include(":skeleton:model:onboarding")
-include(":skeleton:abstraction:authentication")
-include(":skeleton:data:authentication")
-include(":skeleton:model:authentication")
-include(":skeleton:presentation:authentication")
-include(":skeleton:usecase:authentication")

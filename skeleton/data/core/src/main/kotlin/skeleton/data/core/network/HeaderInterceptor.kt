@@ -1,6 +1,5 @@
 package skeleton.data.core.network
 
-import base.model.NoArgs
 import okhttp3.Interceptor
 import okhttp3.Response
 import skeleton.data.base.KEY_CHANNEL_NAME
@@ -12,6 +11,7 @@ import skeleton.data.base.KEY_SIGNATURE
 import skeleton.data.base.KEY_TIMESTAMP
 import skeleton.data.base.KEY_UUID
 import skeleton.data.base.KEY_VERSION
+import skeleton.model.base.NoArgs
 import skeleton.usecase.core.GetChannelUseCase
 import skeleton.usecase.core.GetLastLocationUseCase
 import javax.inject.Inject

@@ -1,7 +1,7 @@
 package skeleton.data.core.di
 
 import android.content.Context
-import base.data.BasePreference
+import skeleton.data.base.BasePreference
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

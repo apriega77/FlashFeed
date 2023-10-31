@@ -1,7 +1,6 @@
 package skeleton.presentation.base
 
 import androidx.lifecycle.viewModelScope
-import base.presentation.BaseViewModel
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.shareIn
 

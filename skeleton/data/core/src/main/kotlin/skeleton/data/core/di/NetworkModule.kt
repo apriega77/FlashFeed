@@ -1,7 +1,7 @@
 package skeleton.data.core.di
 
 import android.content.Context
-import base.model.BuildFlavor
+import skeleton.model.base.BuildFlavor
 import com.chuckerteam.chucker.api.ChuckerCollector
 import com.chuckerteam.chucker.api.ChuckerInterceptor
 import com.chuckerteam.chucker.api.RetentionManager

@@ -9,15 +9,15 @@ class FirebaseConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
             with(pluginManager) {
-                apply("com.google.firebase.appdistribution")
-                apply("com.google.firebase.firebase-perf")
-                apply("com.google.firebase.crashlytics")
-                apply("com.google.gms.google-services")
+//                apply("com.google.firebase.appdistribution")
+//                apply("com.google.firebase.firebase-perf")
+//                apply("com.google.firebase.crashlytics")
+//                apply("com.google.gms.google-services")
             }
 
             androidAppConfiguration {
                 productFlavors.forEach { flavor ->
-                    updateReleaseNotes()
+                //    updateReleaseNotes()
                     firebaseAppDistributionConfiguration {
                         groups = flavor.buildConfigFields[TesterConfig.GROUP_KEY]?.value
                         releaseNotesFile = "${rootProject.projectDir}/RELEASE_NOTES.txt"
@@ -30,11 +30,11 @@ class FirebaseConventionPlugin : Plugin<Project> {
             dependencies {
                 val bom = libs.findLibrary("firebase-bom").get()
                 add("implementation", platform(bom))
-                findImplementation(
-                    "firebase.analytics",
-                    "firebase.performance",
-                    "firebase.crashlytics",
-                )
+//                findImplementation(
+//                    "firebase.analytics",
+//                    "firebase.performance",
+//                    "firebase.crashlytics",
+//                )
             }
         }
     }

@@ -1,6 +1,0 @@
-[submodule "ocean-android-base"]
-	path = ocean-android-base
-	url = git@gitlab.com:sedayux/ocean-android-base.git
-[submodule "ocean-ui-component"]
-	path = ocean-ui-component
-	url = git@gitlab.com:sedayux/ocean-ui-component.git

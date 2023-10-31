@@ -1,8 +1,6 @@
 package skeleton.presentation.base
 
 import androidx.lifecycle.viewModelScope
-import base.presentation.BaseViewModel
-import base.presentation.UseCaseLauncher
 import kotlinx.coroutines.CoroutineScope
 import skeleton.model.base.BaseAppsError
 

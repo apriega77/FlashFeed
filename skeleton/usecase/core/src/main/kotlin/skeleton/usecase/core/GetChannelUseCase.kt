@@ -1,9 +1,9 @@
 package skeleton.usecase.core
 
-import base.model.NoArgs
-import base.usecase.BaseUseCaseSync
 import skeleton.abstraction.core.CoreRepository
+import skeleton.model.base.NoArgs
 import skeleton.model.core.Channel
+import skeleton.usecase.base.BaseUseCaseSync
 
 class GetChannelUseCase(private val coreRepository: CoreRepository) :
     BaseUseCaseSync<NoArgs, Channel>() {

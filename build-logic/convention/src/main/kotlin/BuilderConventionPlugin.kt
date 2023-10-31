@@ -46,7 +46,6 @@ class BuilderConventionPlugin : Plugin<Project> {
                         feature.beforeEvaluate {
                             feature.configureAndroid(moduleType.name)
                             feature.addDependencies(moduleType.name)
-                            feature.generateGradleDependencyRules(moduleType.name)
                         }
                     }
                 }
@@ -122,18 +121,14 @@ class BuilderConventionPlugin : Plugin<Project> {
         dependencies {
             when (moduleType) {
                 ABSTRACTION_LAYER -> {
-                    if (name == "base") {
-                        api(project(":ocean-android-base:abstraction"))
-                    } else {
+                    if (name != "base") {
                         abstraction(AbstractionModules.Base, true)
                     }
                     model(findModule())
                 }
 
                 DATA_LAYER -> {
-                    if (name == "base") {
-                        api(project(":ocean-android-base:data"))
-                    } else {
+                    if (name != "base") {
                         data(DataModules.Base)
                     }
                     abstraction(findModule(), true)
@@ -144,18 +139,13 @@ class BuilderConventionPlugin : Plugin<Project> {
                 }
 
                 MODEL_LAYER -> {
-                    if (name == "base") {
-                        api(project(":ocean-android-base:model"))
-                    } else {
+                    if (name != "base") {
                         model(ModelModules.Base)
                     }
                 }
 
                 PRESENTATION_LAYER -> {
-                    if (name == "base") {
-                        api(project(":ocean-android-base:presentation"))
-                        api(project(":ocean-ui-component:widget"))
-                    } else {
+                    if (name != "base") {
                         presentation(PresentationModules.Base)
                     }
                     usecase(findModule())
@@ -165,9 +155,7 @@ class BuilderConventionPlugin : Plugin<Project> {
                 }
 
                 USECASE_LAYER -> {
-                    if (name == "base") {
-                        api(project(":ocean-android-base:usecase"))
-                    } else {
+                    if (name != "base") {
                         usecase(UsecaseModules.Base)
                     }
                     abstraction(findModule())
@@ -224,29 +212,5 @@ class BuilderConventionPlugin : Plugin<Project> {
             "\tobject $name : ${this.name.capitalized()}(\"$path\",\"${it.key}\")"
         }
         return listClass.sorted().joinToString(separator = "\n") { it }
-    }
-
-    private fun Project.generateGradleDependencyRules(moduleType: String) {
-        val file = this.buildFile
-        val firstLine = file.useLines {
-            it.firstOrNull()
-        }
-        if (firstLine == null) {
-            file.writeText(
-                "dependencies {\n" +
-                    "    /*\n" +
-                    "    * Configures the dependency notations for this project in version catalog.\n" +
-                    "    * Version catalog located in \"gradle/libs.versions.toml\"\n" +
-                    "    * Example:\n" +
-                    "    *\n" +
-                    "    *    dependencies {\n" +
-                    "    *        api(libs.bundles.$PROJECT_NAME.$moduleType.$name.api)\n" +
-                    "    *    }\n" +
-                    "    *\n" +
-                    "    * After you modified that file, make sure your dependencies sync properly\n" +
-                    "    */\n" +
-                    "}\n",
-            )
-        }
     }
 }

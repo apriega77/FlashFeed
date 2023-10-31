@@ -2,7 +2,8 @@ package skeleton.presentation.core.di
 
 import android.content.Context
 import androidx.fragment.app.FragmentActivity
-import base.hub.RouterHandler
+import base.RouterHandler
+import base.presentation.deeplink.DeepLinkRouter
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -23,11 +24,10 @@ object ProvideActivityComponent {
     fun provideDefaultErrorHandler(
         @ActivityContext context: Context,
         errorMapper: BaseAppsUseCaseErrorMapper,
-//        deeplinkRouter: DeepLinkRouter,
+        deeplinkRouter: DeepLinkRouter,
     ): BaseAppsErrorHandler =
-        // enable when bottom sheet error is available
-//        BaseAppsErrorHandlerImpl(context as FragmentActivity, errorMapper, deeplinkRouter)
-        BaseAppsErrorHandlerImpl(context as FragmentActivity, errorMapper)
+        BaseAppsErrorHandlerImpl(context as FragmentActivity, errorMapper, deeplinkRouter)
+
 
     @Provides
     @ActivityScoped

@@ -1,5 +1,5 @@
 /*
- * Copyright 2023 PT Samudra Inovasi Teknologi
+ * Copyright 2023 <a href="mailto:apriega77@gmail.com">Apriega77</a>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -45,23 +45,19 @@ dependencies {
 gradlePlugin {
     plugins {
         register("builder") {
-            id = "co.id.samudrainovasi.builderPlugin"
+            id = "co.id.apriega77.builderPlugin"
             implementationClass = "BuilderConventionPlugin"
         }
-        register("detekt") {
-            id = "co.id.samudrainovasi.detektPlugin"
-            implementationClass = "DetektConventionPlugin"
-        }
         register("firebase") {
-            id = "co.id.samudrainovasi.firebasePlugin"
+            id = "co.id.apriega77.firebasePlugin"
             implementationClass = "FirebaseConventionPlugin"
         }
         register("flavors") {
-            id = "co.id.samudrainovasi.buildFlavorsPlugin"
+            id = "co.id.apriega77.buildFlavorsPlugin"
             implementationClass = "BuildFlavorsConventionPlugin"
         }
         register("spotless") {
-            id = "co.id.samudrainovasi.spotlessPlugin"
+            id = "co.id.apriega77.spotlessPlugin"
             implementationClass = "SpotlessConventionPlugin"
         }
     }

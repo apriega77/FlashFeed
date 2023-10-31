@@ -1,6 +1,7 @@
 package skeleton.data.core.network
 
 import com.chuckerteam.chucker.api.ChuckerInterceptor
+import okhttp3.CertificatePinner
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -14,10 +15,6 @@ class RetrofitBuilder @Inject constructor(
     private val serverConfig: ServerConfig,
     private val httpLoggingInterceptor: HttpLoggingInterceptor,
     private val chuckerInterceptor: ChuckerInterceptor,
-//    private val securedRequestInterceptor: SecuredRequestInterceptor,
-//    private val securedResponseInterceptor: SecuredResponseInterceptor,
-//    @SecurityFlag
-//    private val isSecurityEnabled: Boolean
 ) {
     private val timeOut = 60L
 
@@ -30,21 +27,12 @@ class RetrofitBuilder @Inject constructor(
                 addInterceptor(chuckerInterceptor)
                 addInterceptor(httpLoggingInterceptor)
             }
-//            if (isSecurityEnabled) {
-//                addInterceptor(securedResponseInterceptor)
-//                addInterceptor(securedRequestInterceptor)
-//            }
         }.build()
         return getRetrofit(client)
     }
 
     private fun getClientBuilder() = run {
         OkHttpClient.Builder().apply {
-//            certificatePinner(
-//                CertificatePinner.Builder().apply {
-//                    add(serverConfig.urlPattern, serverConfig.sslPinning)
-//                }.build()
-//            )
             connectTimeout(timeOut, TimeUnit.SECONDS)
             readTimeout(timeOut, TimeUnit.SECONDS)
         }

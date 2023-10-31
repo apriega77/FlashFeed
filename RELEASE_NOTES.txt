@@ -1,9 +1,0 @@
-:sparkles: add retrofit
-
-update reference android base
-
-Implement DeepLink
-
-Merge branch 'feature/configuration' into 'development'
-
-:sparkles: setup configuration

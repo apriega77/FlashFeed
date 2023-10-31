@@ -1,8 +1,8 @@
 package skeleton.usecase.core
 
-import base.model.NoArgs
-import base.usecase.BaseUseCaseSync
 import skeleton.abstraction.core.LocationRepository
+import skeleton.model.base.NoArgs
+import skeleton.usecase.base.BaseUseCaseSync
 
 class GetLastLocationUseCase(private val locationRepository: LocationRepository) :
     BaseUseCaseSync<NoArgs, Pair<String, String>>() {

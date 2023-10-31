@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.os.Bundle
 import androidx.annotation.CallSuper
-import base.presentation.BaseActivity
 import javax.inject.Inject
 
 abstract class BaseAppsActivity : BaseActivity() {

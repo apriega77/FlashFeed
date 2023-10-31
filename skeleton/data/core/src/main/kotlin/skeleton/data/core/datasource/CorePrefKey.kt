@@ -1,6 +1,6 @@
 package skeleton.data.core.datasource
 
-import base.model.PreferenceKey
+import skeleton.model.core.PreferenceKey
 import skeleton.model.core.Token
 
 object CorePrefKey {
