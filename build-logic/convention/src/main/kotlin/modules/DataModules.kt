@@ -3,6 +3,6 @@ package modules
 
 object DataModules {
 
-	object Base : Data(":skeleton:data:base","base")
-	object Core : Data(":skeleton:data:core","core")
+	object Base : Data(":flashfeed:data:base","base")
+	object Core : Data(":flashfeed:data:core","core")
 }

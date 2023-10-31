@@ -30,21 +30,21 @@ dependencyResolutionManagement {
     }
     versionCatalogs {
         create("androidBaseLibs") {
-            from(files("skeleton/gradle/libs.versions.toml"))
+            from(files("flashfeed/gradle/libs.versions.toml"))
         }
     }
 }
-rootProject.name = "skeleton"
-include(":skeleton-app")
+rootProject.name = "flashfeed"
+include(":flashfeed-app")
 
-include("skeleton:abstraction:base")
-include("skeleton:data:base")
-include("skeleton:model:base")
-include("skeleton:presentation:base")
-include("skeleton:usecase:base")
-include("skeleton:hub")
-include(":skeleton:presentation:core")
-include(":skeleton:model:core")
-include(":skeleton:data:core")
-include(":skeleton:usecase:core")
-include(":skeleton:abstraction:core")
+include("flashfeed:abstraction:base")
+include("flashfeed:data:base")
+include("flashfeed:model:base")
+include("flashfeed:presentation:base")
+include("flashfeed:usecase:base")
+include("flashfeed:hub")
+include(":flashfeed:presentation:core")
+include(":flashfeed:model:core")
+include(":flashfeed:data:core")
+include(":flashfeed:usecase:core")
+include(":flashfeed:abstraction:core")

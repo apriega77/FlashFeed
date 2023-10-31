@@ -3,6 +3,6 @@ package modules
 
 object UsecaseModules {
 
-	object Base : Usecase(":skeleton:usecase:base","base")
-	object Core : Usecase(":skeleton:usecase:core","core")
+	object Base : Usecase(":flashfeed:usecase:base","base")
+	object Core : Usecase(":flashfeed:usecase:core","core")
 }

@@ -1,5 +1,5 @@
 object ProjectConfig {
-    const val PROJECT_NAME = "skeleton"
+    const val PROJECT_NAME = "flashfeed"
 
     const val ABSTRACTION_LAYER = "abstraction"
     const val DATA_LAYER = "data"
